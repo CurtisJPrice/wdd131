@@ -1,0 +1,131 @@
+:root {
+        --primary-color: #D3D3D3;
+        --secondary-color: #FFA500;
+        --accent1-color: #A9A9A9;
+        --accent2-color: #FFA500;
+        --subtle-color: #FFFFFF;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    max-width: 1000px;
+    margin: auto;
+}
+
+header {
+    text-align: center;
+    width: 100%;
+    background-color: var(--primary-color);
+    padding-top: 1px;
+}
+
+header h1 {
+    color: #fff;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
+    font-size: 1.4rem;
+}
+
+.navigation {
+    position: relative;
+}
+
+.navigation ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    background-color: var(--accent2-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: unset;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 150px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    color: #000;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.navigation a:hover {
+    background-color: var(--subtle-color);
+}
+
+.open li {
+    display: block;
+}
+
+.active {
+    background-color: var(--secondary-color);
+}
+
+#menu {
+    font-size: 1.5rem;
+    border: 0;
+    background: none;
+    color: #000;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+}
+
+#menu::before {
+    color: #fff;
+    content: "☰";
+    border: 1px solid black;
+    border-radius: 2px;
+    padding: 5px;
+}
+
+#menu.open::before {
+    content: "❎";
+    border: none;
+    padding: 0;
+}
+
+.temple-pictures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+    
+}
+
+figure img {
+    width:100%;
+    height: auto;
+}
+
+figcaption {
+    font-size: 0.8em;
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    background-color: #000;
+    margin-top: 1em;
+    padding: 1px;
+}
+
+footer p {
+    margin: 0.5em;
+    color: #fff;
+}
