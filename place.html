@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>WDD 131 - Country Page - Curtis J. Price</title>
+        <meta name="description" content="Information about my country South Sudan.">
+        <meta name="author" content="Curtis J. Price">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="styles/place.css">
+        
+    </head>
+
+
+<body>
+    <header>
+        <h1>Tokyo, Japan</h1>
+        <picture>
+            <source srcset="images/g-base-tokyo.jpg" media="(max-width: 500px)">
+            <source srcset="images/g-base-tokyo.jpg" media="(max-width: 1000px)">
+            <img src="images/g-base-tokyo.jpg" alt="Hero Image">
+        </picture>
+            <section id="data">
+                <h2>Data</h2>
+                <ul>
+                <p>Area: 2.19k square kilometers</p>
+                <p>Population: 14.09 Million</p>
+                <p>Language: Japanese</p>
+                <p>Currency: Japanese Yen</p>
+                <p>Time Zone: Japan Standard Time</p>
+                <p>Calling Code: 81</p>
+                <p>Internet ID: No specific internet ID</p>
+                </ul>
+            </section>
+            <section id="weather">
+                <h2>Weather</h2>
+                <p>Temperature: 71 Fahrenheit, 22 Celsius</p>
+                <p>Conditions: Light rain</p>
+                <p>Wind: 6 km/h</p>
+                <p>Humidity: 91%</p>
+                </section>
+    </header>
+    <main>
+    </main>
+
+    <footer>
+        <div>
+            <p>&copy;<span id="current-year"></span> | Curtis J. Price | United States</p>
+            <p id="last-modified"></p>
+        </div>
+    
+        <div>
+        <label for="temperature">Temperature (°F):</label>
+        <input type="number" id="temperature" placeholder="Enter temperature" required>
+        <label for="windSpeed">Wind Speed (mph):</label>
+        <input type="number" id="windSpeed" placeholder="Enter wind speed" required>
+        <button onclick="calculateWindChill()">Calculate Wind Chill</button>
+        <p id="result"></p>
+        </div>
+    </footer>
+    <script>
+        // JavaScript to display the last modified date
+        document.getElementById('lastModified').textContent = document.lastModified;
+    </script>
+</body>
+</html>

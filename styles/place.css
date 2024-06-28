@@ -1,0 +1,112 @@
+:root {
+    --primary-color: #D2272D; /* Red color in the header */
+    --secondary-color: #D2272D; /* Red color in the footer */
+    --background-color: #006747; /* Green background color for the headings */
+    --text-color: white;
+    --transparent-bg: rgba(0, 0, 0, 0.5); /* Semi-transparent background for sections */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    margin: 0;
+}
+
+picture {
+    position: relative; /* Added for positioning the sections within the picture */
+}
+
+picture img {
+    width: 100%;
+    height: auto;
+    max-height: 1000px; /* Added maximum height for the image */
+    object-fit: cover;
+}
+
+#data, #weather {
+    position: absolute;
+    background-color: var(--transparent-bg); /* Transparent background for sections */
+    color: var(--text-color);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    z-index: 1;
+}
+
+#data h2, #weather h2 {
+    background-color: var(--background-color); /* Green background for headings */
+    border-radius: 8px 8px 0 0;
+    margin: -1rem -1rem 1rem -1rem;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+#data {
+    top: 10%;
+    left: 5%;
+    width: 90%;
+}
+
+#weather {
+    bottom: 10%;
+    right: 5%;
+    width: 90%;
+}
+
+main {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#weather h2::after {
+    content: "⛅";
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    text-align: center;
+    padding: 1rem; /* Reduced padding */
+    font-size: 1rem; /* Reduced font size */
+}
+
+.footer-logo {
+    margin-top: 20px;
+    width: 50px; /* Set the width as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+@media (min-width: 600px) {
+    #data {
+        width: 30%;
+        top: 10%;
+        left: 5%;
+    }
+
+    #weather {
+        width: 30%;
+        bottom: 10%;
+        right: 5%;
+    }
+
+    main {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
