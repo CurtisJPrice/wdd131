@@ -71,6 +71,30 @@ const temples = [
         imageUrl:
             "https://churchofjesuschristtemples.org/assets/img/temples/oakland-california-temple/oakland-california-temple-2654-main.jpg"
     },
+    {
+        templeName: "Portland Oregon Temple",
+        location: "Portland, Oregon, United States",
+        dedicated: "1989, August, 19-21",
+        area: 80500,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/portland-oregon-temple/portland-oregon-temple-1629-main.jpg"
+    },
+    {
+        templeName: "Medford Oregon Temple",
+        location: "Medford, Oregon, United States",
+        dedicated: "2000, April, 16",
+        area: 10700,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/medford-oregon-temple/medford-oregon-temple-1583-main.jpg"
+    },
+    {
+        templeName: "Columbia River Washington Temple",
+        location: "Richland, Washington, United States",
+        dedicated: "2001, November, 18",
+        area: 16880,
+        imageUrl:
+            "https://churchofjesuschristtemples.org/assets/img/temples/columbia-river-washington-temple/columbia-river-washington-temple-39505-main.jpg"
+    },
 
 ];
 
