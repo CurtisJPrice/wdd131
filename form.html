@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Product, Review, Post Review, Post Product">
+    <meta name="author" content="Neal Coates">
+    <title>Product Review</title>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&amp;family=Sofia&amp;family=Trirong&amp;display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles/form.css">
+    <script src="scripts/form.js" defer=""></script>
+    <script src="scripts/getdates.js" defer=""></script>
+
+</head>
+
+
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form method="get" action="review.html" class="wf1">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+
+                <fieldset>
+                    <legend>Overall Rating</legend>
+                    <div class="rating">
+                        <div>
+                            <label for="rating-1">☆</label>
+                            <input type="radio" id="rating-1" name="rating" value="1" required>
+                        </div>
+                        <div>
+                            <label for="rating-2">☆☆</label>
+                            <input type="radio" id="rating-2" name="rating" value="2" required>
+                        </div>
+                        <div>
+                            <label for="rating-3">☆☆☆</label>
+                            <input type="radio" id="rating-3" name="rating" value="3" required>
+                        </div>
+                        <div>
+                            <label for="rating-4">☆☆☆☆</label>
+                            <input type="radio" id="rating-4" name="rating" value="4" required>
+                        </div>
+                        <div>
+                            <label for="rating-5">☆☆☆☆☆</label>
+                            <input type="radio" id="rating-5" name="rating" value="5" required>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <label for="installation-date">Date of Installation</label>
+                <input type="date" id="installation-date" name="installation_date" autocomplete="on" required>
+
+                <fieldset>
+                    <legend>Which features did you find useful in the product? {check all that apply)</legend>
+                    <div class="checkbox-group">
+                        <div>
+                            <input type="checkbox" id="feature-1" name="features" value="feature1">
+                            <label for="feature-1">Durability</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature-2" name="features" value="feature2">
+                            <label for="feature-2">Ease of Use</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature-3" name="features" value="feature3">
+                            <label for="feature-3">Performance</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="feature-4" name="features" value="feature4">
+                            <label for="feature-3">Design</label>
+                        </div>
+                    </div>
+                </fieldset>
+
+                <label for="review">Written Review(optional)</label>
+                <textarea id="review" name="review"></textarea>
+
+                <label for="username">Your Name(optional)</label>
+                <input type="text" id="username" name="username">
+
+                <input type="submit" value="Post Review">
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;<span id="current-year"></span> | Curtis J. Price | United States</p>
+        <p id="last-modified"></p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Confirmation</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Review Confirmation</h1>
+    </header>
+    <main>
+        <p>Thank you for your review!</p>
+    </main>
+    <footer>
+        <p>&copy; <span id="year"></span> | Curtis J. Price | United States<span id="lastModified"></span></p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const footerYear = document.getElementById("year");
+            const footerLastModified = document.getElementById("lastModified");
+
+            const date = new Date();
+            footerYear.textContent = date.getFullYear();
+            footerLastModified.textContent = document.lastModified;
+
+            if (localStorage.getItem('reviewCount') === null) {
+                localStorage.setItem('reviewCount', 0);
+            }
+            let reviewCount = parseInt(localStorage.getItem('reviewCount')) + 1;
+            localStorage.setItem('reviewCount', reviewCount);
+
+            const reviewCountElement = document.createElement('p');
+            reviewCountElement.textContent = `Number of reviews submitted: ${reviewCount}`;
+            document.querySelector('main').appendChild(reviewCountElement);
+        });
+    </script>
+</body>
+
+</html>
