@@ -1,99 +1,102 @@
 const temples = [
     {
-        templeName: "Aba Nigeria",
-        location: "Aba, Nigeria",
-        dedicated: "2005, August, 7",
-        area: 11500,
+        templeName: "???-1",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/aba-nigeria/400x250/aba-nigeria-temple-lds-273999-wallpaper.jpg"
+            "???"
     },
     {
-        templeName: "Manti Utah",
-        location: "Manti, Utah, United States",
-        dedicated: "1888, May, 21",
-        area: 74792,
+        templeName: "???-2",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/manti-utah/400x250/manti-temple-768192-wallpaper.jpg"
+            "???"
     },
     {
-        templeName: "Payson Utah",
-        location: "Payson, Utah, United States",
-        dedicated: "2015, June, 7",
-        area: 96630,
+        templeName: "???-3",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/payson-utah/400x225/payson-utah-temple-exterior-1416671-wallpaper.jpg"
+            "???"
     },
     {
-        templeName: "Yigo Guam",
-        location: "Yigo, Guam",
-        dedicated: "2020, May, 2",
-        area: 6861,
+        templeName: "???-4",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/yigo-guam/400x250/yigo_guam_temple_2.jpg"
+            "???"
     },
     {
-        templeName: "Washington D.C.",
-        location: "Kensington, Maryland, United States",
-        dedicated: "1974, November, 19",
-        area: 156558,
+        templeName: "???-5",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/washington-dc/400x250/washington_dc_temple-exterior-2.jpeg"
+            "???"
     },
     {
-        templeName: "Lima Perú",
-        location: "Lima, Perú",
-        dedicated: "1986, January, 10",
-        area: 9600,
+        templeName: "???-6",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/lima-peru/400x250/lima-peru-temple-evening-1075606-wallpaper.jpg"
+            "???"
     },
     {
-        templeName: "Mexico City Mexico",
-        location: "Mexico City, Mexico",
-        dedicated: "1983, December, 2",
-        area: 116642,
+        templeName: "???-7",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
+            "???"
     },
     {
-        templeName: "Rome Italy Temple",
-        location: "Rome, Italy",
-        dedicated: "2019, March, 10-12",
-        area: 41010,
+        templeName: "???-8",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/rome-italy-temple/rome-italy-temple-3545.jpg"
+            "???"
     },
     {
-        templeName: "Oakland California Temple",
-        location: "Oakland, California, United States",
-        dedicated: "1964, November, 17-19",
-        area: 80157,
+        templeName: "???-9",
+        location: "???",
+        describe: "???",
+        sourceUrl:
+            "???",
+        dedicated: "???",
+        area: 54,
         imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/oakland-california-temple/oakland-california-temple-2654-main.jpg"
-    },
-    {
-        templeName: "Portland Oregon Temple",
-        location: "Portland, Oregon, United States",
-        dedicated: "1989, August, 19-21",
-        area: 80500,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/portland-oregon-temple/portland-oregon-temple-1629-main.jpg"
-    },
-    {
-        templeName: "Medford Oregon Temple",
-        location: "Medford, Oregon, United States",
-        dedicated: "2000, April, 16",
-        area: 10700,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/medford-oregon-temple/medford-oregon-temple-1583-main.jpg"
-    },
-    {
-        templeName: "Columbia River Washington Temple",
-        location: "Richland, Washington, United States",
-        dedicated: "2001, November, 18",
-        area: 16880,
-        imageUrl:
-            "https://churchofjesuschristtemples.org/assets/img/temples/columbia-river-washington-temple/columbia-river-washington-temple-39505-main.jpg"
+            "???"
     },
 
 ];
@@ -159,7 +162,13 @@ document.addEventListener("DOMContentLoaded", () => {
             templeName.textContent = temple.templeName;
 
             const templeLocation = document.createElement('p');
-            templeLocation.textContent = `Location: ${temple.location}`;
+            templeLocation.textContent = `Park Location: ${temple.location}`;
+
+            const templeDescribe = document.createElement('p');
+            templeDescribe.textContent = `Park Description: ${temple.describe}`;
+
+            const templeSource = document.createElement('p');
+            templeSource.textContent = `Source: ${temple.sourceUrl}`;
 
             const templeDedicated = document.createElement('p');
             templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
@@ -170,6 +179,8 @@ document.addEventListener("DOMContentLoaded", () => {
             templeCard.appendChild(templeImage);
             templeCard.appendChild(templeName);
             templeCard.appendChild(templeLocation);
+            templeCard.appendChild(templeDescribe);
+            templeCard.appendChild(templeSource);
             templeCard.appendChild(templeDedicated);
             templeCard.appendChild(templeArea);
 
