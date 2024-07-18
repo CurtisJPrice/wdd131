@@ -5,8 +5,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 1, 1996",
+        area: 4200,
         imageUrl:
             "???"
     },
@@ -16,8 +16,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 2, 1996",
+        area: 42000,
         imageUrl:
             "???"
     },
@@ -27,8 +27,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 3, 1996",
+        area: 420,
         imageUrl:
             "???"
     },
@@ -38,8 +38,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 4, 1997",
+        area: 570,
         imageUrl:
             "???"
     },
@@ -49,8 +49,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 5, 1997",
+        area: 5700,
         imageUrl:
             "???"
     },
@@ -60,8 +60,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 6, 1997",
+        area: 57000,
         imageUrl:
             "???"
     },
@@ -71,8 +71,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 7, 1998",
+        area: 990,
         imageUrl:
             "???"
     },
@@ -82,8 +82,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 8, 1998",
+        area: 9900,
         imageUrl:
             "???"
     },
@@ -93,8 +93,8 @@ const temples = [
         describe: "???",
         sourceUrl:
             "???",
-        dedicated: "???",
-        area: 54,
+        dedicated: "November 9, 1998",
+        area: 99000,
         imageUrl:
             "???"
     },
@@ -138,13 +138,13 @@ document.addEventListener("DOMContentLoaded", () => {
         let filteredTemples = temples;
 
         if (filter === 'old') {
-            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1997);
         } else if (filter === 'new') {
-            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 2000);
+            filteredTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() >= 1998);
         } else if (filter === 'large') {
-            filteredTemples = temples.filter(temple => temple.area > 90000);
+            filteredTemples = temples.filter(temple => temple.area > 80000);
         } else if (filter === 'small') {
-            filteredTemples = temples.filter(temple => temple.area < 10000);
+            filteredTemples = temples.filter(temple => temple.area < 700);
         }
 
         updateTitle(filter);
@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", () => {
             templeSource.textContent = `Source: ${temple.sourceUrl}`;
 
             const templeDedicated = document.createElement('p');
-            templeDedicated.textContent = `Dedicated: ${temple.dedicated}`;
+            templeDedicated.textContent = `Park Founded: ${temple.dedicated}`;
 
             const templeArea = document.createElement('p');
             templeArea.textContent = `Area: ${temple.area} sq ft`;
